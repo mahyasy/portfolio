@@ -1,22 +1,22 @@
-'use client'
+"use client";
 
-import Navbar from '../../Components/Navbar'
-import { useContext } from 'react';
-import { WrapperContext } from '../Context/WrapperComponent';
+import { useContext } from "react";
+import { WrapperContext } from "../Context/WrapperComponent";
+import Intro from "@/Components/Intro";
 
 const Main = () => {
-  const {Tabname} = useContext(WrapperContext)
+  const { Tabname } = useContext(WrapperContext);
+
   return (
-    <div >
-       
-        {Tabname.map((tab) => (
-        <section className="h-[400px] p-20 border border-white" id={tab}>
-          {tab}
+    <div className="flex flex-col items-center justify-center z-0">
+      <Intro />
+      {Tabname.map((tab) => (
+        <section className="h-[400px] p-10" key={tab.id} id={tab.name}>
+          {tab.tag}
         </section>
       ))}
-       
     </div>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;

@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  .move{
+    background-color: white;
+    color: #2867b2;
+    width: 0px;
+    text-align: center;
+    animation: 1s slide-left ease-in-out forwards;
+  
+  }
+  @keyframes slide-left {
+  0%{
+    width: 0px;
+  }
+
+  100%{
+    width: 100px;
+  }
+    
+  }
+}
+.slideup {
+    animation: 5s up ease-in-out;
+    margin-left: 30px;
+    }
+    @keyframes up {
+      0% {
+        opacity: 0;
+        transform: translateY(80%);
+      }
+      20% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+  
+      
+    }
+    .slideup2 {
+        animation: 5s up ease-in-out forwards;
+        animation-delay: 2s;
+        opacity: 0;
+        margin-left: 20px;
+  
+        
+        }
+        @keyframes up {
+          0% {
+            opacity: 0;
+            transform: translateY(80%);
+          }
+          20% {
+            opacity: 0;
+          }
+          50% {
+            opacity: 1;
+            transform: translateY(0%);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0%);
+          }
+      
+          
+        }
+      
